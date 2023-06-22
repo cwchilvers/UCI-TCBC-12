@@ -1,15 +1,15 @@
-DROP DATABASE IF EXISTS employees_db;       /* Delete employees_db if it already exists */
-CREATE DATABASE employees_db;
+DROP DATABASE IF EXISTS employees_db;       -- Delete employees_db if it already exists
+CREATE DATABASE employees_db;               -- Create employees_db
 
 USE employees_db;                       
 
-/* Create table for departments */
+-- Create table for departments
 CREATE TABLE department (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(30) NOT NULL
 );
 
-/* Create table for roles */
+-- Create table for roles
 CREATE TABLE role (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(30) NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE role (
     FOREIGN KEY (department_id) REFERENCES department(id)
 );
 
-/* Create table for employees */
+-- Create table for employees
 CREATE TABLE employee (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(30) NOT NULL,
