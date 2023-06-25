@@ -1,8 +1,8 @@
 // Import Modules
 const express = require('express');             // Import express
 const api = require('./src/routes/api');        // Import routes.js
-const logo = require("./lib/logo");             // Import logo.js
-const main = require("./src/main");            // Import main.js
+const logo = require("./src/utilities/logo");   // Import logo.js
+const main = require("./src/main");             // Import main.js
 
 const PORT = process.env.PORT || 3000;
 const app = express();
