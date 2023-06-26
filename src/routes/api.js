@@ -1,7 +1,10 @@
-const db = require('../utilities/connect_db'); // Import connect_db.js
-const fs = require('fs');
-const path = require('path');
-const app = require('express').Router();
+const db = require('../utilities/connect_db');  // Import connect_db.js (connect to database)
+const fs = require('fs');                       // Import fs module (to read files)
+const path = require('path');                   
+const app = require('express').Router();        
+const table3 = require('cli-table3');            // Using cli-table3 because console.table() includes
+                                                // a column for index that cannot be removed
+
 
 // View all employees
 app.get('/employees', (req, res) => {
@@ -10,13 +13,36 @@ app.get('/employees', (req, res) => {
 
     db.query(query, (error, results) => {
         if (error) {
-            console.error('An error occurred:', error);
+            console.error('An error occurred:', error);             // Log error to console
+            res.status(500).json({ error: 'An error occurred' });   // Send error
         } else {
-            console.log('\n');
-            console.table(results);
+            const table = new table3({
+                head: ['Employee ID', 'Department', 'Role', 'Salary', 'First Name', 'Last Name'],   // Column names
+                colWidths: [15, 25, 25, 15, 15, 15],                                                // Column widths
+            });
+
+            results.forEach(({ id, department, role, salary, first_name, last_name }) => {          // For each object in results array
+                table.push([id, department, role, salary, first_name, last_name]);                  // Push values to table
+            });
+
+            console.log(table.toString());  // Displays the table in the console
+            res.status(200).json(results);  // Send results
         }
-        db.end();
     });
 });
+
+// Add employee
+
+// Update employee role
+
+// View all roles
+
+// Add role
+
+// View all departments
+
+// Add department
+
+// Quit
 
 module.exports = app;

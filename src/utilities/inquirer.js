@@ -24,6 +24,18 @@ const mainMenu = async () => {
     return data;
 };
 
+// Pause
+const pause = async () => {
+    const data = await inquirer.prompt([
+        {
+            type: 'input',
+            message: 'Press enter to continue...\n',
+            name: 'pause',
+        }
+    ]);
+};
+
 module.exports = {
     mainMenu,
+    pause
 };

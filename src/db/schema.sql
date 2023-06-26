@@ -5,8 +5,8 @@ USE employees_db;
 
 -- Create table for departments
 CREATE TABLE department (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(30) NOT NULL
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, -- Auto-incrementing ID
+    name VARCHAR(30) NOT NULL                   -- Department name (30 char max)
 );
 
 -- Create table for roles

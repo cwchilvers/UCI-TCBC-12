@@ -1,4 +1,4 @@
-const logo = () => console.log(`
+module.exports = () => console.log(`
 ==================================================
  _____                 _                       
 | ____|_ __ ___  _ __ | | ___  _   _  ___  ___ 
@@ -12,9 +12,3 @@ const logo = () => console.log(`
   
 ==================================================
 `);
-
-const viewAllEmployees = () => { 
-
-};
-
-module.exports = logo;

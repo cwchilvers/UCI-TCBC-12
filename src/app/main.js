@@ -3,8 +3,8 @@ const logo = require("../utilities/logo");                                  // I
 const viewAllEmployees = require("../handlers/viewAllEmployees_handler");   // Import viewAllEmployees.js
 
 const start = async () => {
-    logo();
-    await mainMenu();
+    logo();             // Display logo
+    await mainMenu();   // Display main menu
 }
 const mainMenu = async () => {
     const data = await inquirer.mainMenu();
