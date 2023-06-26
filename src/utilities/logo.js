@@ -13,4 +13,8 @@ const logo = () => console.log(`
 ==================================================
 `);
 
+const viewAllEmployees = () => { 
+
+};
+
 module.exports = logo;

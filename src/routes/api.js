@@ -1,16 +1,22 @@
 const db = require('../utilities/connect_db'); // Import connect_db.js
+const fs = require('fs');
+const path = require('path');
+const app = require('express').Router();
 
 // View all employees
-app.get('/api/employees', (req, res) => {
-    const sql = `SELECT * FROM employee`;
-    db.query(sql, (err, rows) => {
-        if (err) {
-            res.status(500).json({ error: err.message });
-            return;
+app.get('/employees', (req, res) => {
+    const queryFilePath = path.join(__dirname, '../db/queries/viewAllEmployees_query.sql');
+    const query = fs.readFileSync(queryFilePath, 'utf8');
+
+    db.query(query, (error, results) => {
+        if (error) {
+            console.error('An error occurred:', error);
+        } else {
+            console.log('\n');
+            console.table(results);
         }
-        res.json({
-            message: 'success',
-            data: rows
-        });
+        db.end();
     });
 });
+
+module.exports = app;
