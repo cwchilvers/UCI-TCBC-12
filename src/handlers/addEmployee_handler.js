@@ -1,12 +1,9 @@
 module.exports = async (req, res) => {
+    const db = require('../utilities/db_connect');  // Import connect_db.js (connect to database)
     const inquirer = require('../utilities/inquirer');
 
     // Get user input
     const data = await inquirer.addEmployee();
 
-    // Insert new employee into database
-    connection.query('INSERT INTO employee SET ?', data, (err, result) => {
-        if (err) throw err;
-        console.log('Added new employee:', result.insertId);
-    });
+    console.log(data);
 };
