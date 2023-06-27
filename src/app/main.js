@@ -28,6 +28,12 @@ const mainMenu = async () => {
             fetch('http://localhost:3000/api/employees', {
                 method: 'POST',
             })
+                .then((response) => {
+                    return pause(); // Pause
+                })
+                .then(() => {
+                    mainMenu(); // Return to the main menu
+                })
             break;
 
         case 'Update Employee Role':
