@@ -5,6 +5,7 @@ const start = async () => {
     logo();             // Display logo
     await mainMenu();   // Display main menu
 }
+
 const mainMenu = async () => {
     const data = await inquirer.mainMenu();
 
@@ -47,7 +48,7 @@ const mainMenu = async () => {
         case 'Add Department':
             //
             break;
-            
+
         case 'Quit':
             //
             break;

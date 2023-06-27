@@ -1,15 +1,12 @@
-module.exports = () => {
+module.exports = async (req, res) => {
+    const inquirer = require('../utilities/inquirer');
+
     // Get user input
-    const employee = {
-        first_name: 'John',
-        last_name: 'Doe',
-        role_id: 1,
-        manager_id: 2
-    };
+    const data = await inquirer.addEmployee();
 
     // Insert new employee into database
-    connection.query('INSERT INTO employee SET ?', employee, (err, data) => {
+    connection.query('INSERT INTO employee SET ?', data, (err, result) => {
         if (err) throw err;
-        console.log('Added new employee:', data.insertId);
+        console.log('Added new employee:', result.insertId);
     });
 };

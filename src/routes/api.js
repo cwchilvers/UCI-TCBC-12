@@ -1,6 +1,8 @@
 const app = require('express').Router();  
+
 // Handlers
 const viewAllEmployees = require('../handlers/viewAllEmployees_handler');
+const addEmployee = require('../handlers/addEmployee_handler');
 
 // View all employees
 app.get('/employees', (req, res) => {
@@ -9,7 +11,7 @@ app.get('/employees', (req, res) => {
 
 // Add employee
 app.post('/employees', (req, res) => {
-
+    addEmployee(req, res);
 });
 
 
