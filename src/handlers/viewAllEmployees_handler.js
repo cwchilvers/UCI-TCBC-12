@@ -1,5 +1,5 @@
 module.exports = (req, res) => {
-    const db = require('../utilities/db_connect');  // Import connect_db.js (connect to database)
+    const db = require('../utilities/db_utilities/db_connect');  // Import connect_db.js (connect to database)
     const fs = require('fs');                       // Import fs module (to read files)
     const path = require('path');  
     const table3 = require('cli-table3');           // Using cli-table3 because console.table() includes

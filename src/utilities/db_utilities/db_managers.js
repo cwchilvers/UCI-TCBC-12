@@ -1,5 +1,5 @@
 module.exports = () => {
-    const db = require('../utilities/db_connect');  // Import connect_db.js (connect to database)
+    const db = require('../db_utilities/db_connect');  // Import connect_db.js (connect to database)
 
     return new Promise((resolve, reject) => {
         // Get all employees with no manager (meaning they are a manager) from database

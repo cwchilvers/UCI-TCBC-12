@@ -1,5 +1,6 @@
-const inquirer = require("../utilities/inquirer");                          // Import inquirer.js
-const logo = require("../utilities/logo");                                  // Import logo.js
+const logo = require("../components/logo");                             // Import logo.js
+const mainMenu_inquirer = require("../utilities/inquirer/mainMenu");    // Import inquirer.js
+const pause = require("../utilities/inquirer/pause");                   // Import inquirer.js
 
 const start = async () => {
     logo();             // Display logo
@@ -7,7 +8,7 @@ const start = async () => {
 }
 
 const mainMenu = async () => {
-    const data = await inquirer.mainMenu();
+    const data = await mainMenu_inquirer();
 
     // Switch statement to handle user selection
     switch (data.mainMenu) {
@@ -16,7 +17,7 @@ const mainMenu = async () => {
                 method: 'GET',
             })
                 .then((response) => {
-                    return inquirer.pause(); // Pause
+                    return pause(); // Pause
                 })
                 .then(() => {
                     mainMenu(); // Return to the main menu
