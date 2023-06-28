@@ -5,7 +5,7 @@ module.exports = (req, res) => {
     const table3 = require('cli-table3');   // Using cli-table3 because console.table() includes
                                             // a column for index that cannot be removed
 
-    const queryFilePath = path.join(__dirname, '../db/queries/viewAllEmployees_query.sql');
+    const queryFilePath = path.join(__dirname, '../db/queries/viewEmployees_query.sql');
     const query = fs.readFileSync(queryFilePath, 'utf8');
 
     db.query(query, (error, results) => {

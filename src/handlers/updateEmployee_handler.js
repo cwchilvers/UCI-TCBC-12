@@ -1,5 +1,5 @@
 module.exports = async (req, res) => {
-    const db = require('../utilities/db_utilities/db_connect');                     // Import connect_db.js (connect to database)
+    const db = require('../utilities/db_utilities/db_connect');                 // Import connect_db.js (connect to database)
     const prompt = require('../utilities/prompts/updateEmployee_prompt.js');    // Import addEmployee.js (inquirer prompts)
 
     // Get user input
@@ -7,7 +7,6 @@ module.exports = async (req, res) => {
 
     // Update employee role
     const query = `UPDATE employee SET role_id = ${data.role_id} WHERE id = ${data.employee_id};`;
-    
     db.query(query, (error, results) => {
         if (error) {
             console.error('An error occurred:', error);

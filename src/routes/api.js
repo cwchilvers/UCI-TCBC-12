@@ -4,6 +4,7 @@ const app = require('express').Router();
 const viewEmployees_handler = require('../handlers/viewEmployees_handler');
 const addEmployee_handler = require('../handlers/addEmployee_handler');
 const updateEmployee_handler = require('../handlers/updateEmployee_handler');
+const viewRoles_handler = require('../handlers/viewRoles_handler');
 
 // View all employees
 app.get('/employees', (req, res) => {
@@ -22,20 +23,20 @@ app.post('/update-employee', (req, res) => {
 
 // View all roles
 app.get('/roles', (req, res) => {
-    viewAllRoles(req, res);
+    viewRoles_handler(req, res);
 });
 
-// Add role
+// TODO: Add role
 app.post('/add-role', (req, res) => {
-    addRole(req, res);
+    addRole_handler(req, res);
 });
 
 // View all departments
 app.get('/departments', (req, res) => {
-    viewAllDepartments(req, res);
+    viewDepartments_handler(req, res);
 });
 
-// Add department
+// TODO: Add department
 app.post('/add-department', (req, res) => {
     addDepartment(req, res);
 });
