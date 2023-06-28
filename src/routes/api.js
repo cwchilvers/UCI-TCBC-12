@@ -6,6 +6,8 @@ const addEmployee_handler = require('../handlers/addEmployee_handler');
 const updateEmployee_handler = require('../handlers/updateEmployee_handler');
 const viewRoles_handler = require('../handlers/viewRoles_handler');
 
+const viewDepartments_handler = require('../handlers/viewDepartments_handler');
+
 // View all employees
 app.get('/employees', (req, res) => {
     viewEmployees_handler(req, res);
