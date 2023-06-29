@@ -1,4 +1,4 @@
-module.exports = async (req, res) => {
+module.exports = async () => {
     const inquirer = require('inquirer');
 
     await inquirer.prompt([

@@ -9,7 +9,7 @@ const update = async () => {
     return { employees, roles };
 };
 
-module.exports = async (req, res) => {
+module.exports = async () => {
     const inquirer = require('inquirer');
 
     // Update choices

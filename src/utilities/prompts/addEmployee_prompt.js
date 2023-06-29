@@ -9,7 +9,7 @@ const update = async () => {
     return { roles, managers };
 };
 
-module.exports = async (req, res) => {
+module.exports = async () => {
     const inquirer = require('inquirer');
 
     // Update choices

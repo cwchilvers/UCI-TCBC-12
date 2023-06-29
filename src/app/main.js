@@ -98,8 +98,7 @@ const mainMenu = async () => {
             break;
 
         case 'Quit':
-            //
-            break;
+            process.exit()
     }
 }
 
