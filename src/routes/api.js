@@ -5,7 +5,7 @@ const viewEmployees_handler = require('../handlers/viewEmployees_handler');
 const addEmployee_handler = require('../handlers/addEmployee_handler');
 const updateEmployee_handler = require('../handlers/updateEmployee_handler');
 const viewRoles_handler = require('../handlers/viewRoles_handler');
-
+const addRole_handler = require('../handlers/addRole_handler');
 const viewDepartments_handler = require('../handlers/viewDepartments_handler');
 
 // View all employees
@@ -28,7 +28,7 @@ app.get('/roles', (req, res) => {
     viewRoles_handler(req, res);
 });
 
-// TODO: Add role
+// Add role
 app.post('/add-role', (req, res) => {
     addRole_handler(req, res);
 });

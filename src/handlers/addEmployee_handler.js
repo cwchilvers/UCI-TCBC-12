@@ -15,7 +15,6 @@ module.exports = async (req, res) => {
             manager_id: data.manager_id,
         },
         (error, results) => {
-
             if (error) {
                 console.error('An error occurred:', error);             // Log error to console
                 res.status(500).json({ error: 'An error occurred' });   // Server error
