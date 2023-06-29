@@ -14,8 +14,8 @@ module.exports = (req, res) => {
             res.status(500).json({ error: 'An error occurred' });       // Server error
         } else {
             const table = new table3({                                  // Create table
-                head: ['ID', 'Title', 'Salary', 'Department'],     // Column names
-                colWidths: [5, 25, 15, 25],                            // Column widths
+                head: ['ID', 'Title', 'Salary', 'Department'],          // Column names
+                colWidths: [5, 25, 15, 25],                             // Column widths
             });
 
             results.forEach(({ id, title, salary, department }) => {    // For each object in results array
