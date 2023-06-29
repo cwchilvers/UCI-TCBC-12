@@ -1,3 +1,4 @@
+// Import express and create router
 const app = require('express').Router();  
 
 // Import handlers in an object
@@ -11,7 +12,7 @@ const handlers = {
     addDepartment: require('../handlers/addDepartment_handler'),
 };
 
-// Route requests to handlers
+// Route requests to their respective handlers
 app
     .get('/employees', handlers.viewEmployees)
     .post('/add-employee', handlers.addEmployee)
@@ -19,6 +20,7 @@ app
     .get('/roles', handlers.viewRoles)
     .post('/add-role', handlers.addRole)
     .get('/departments', handlers.viewDepartments)
-    .post('/add-department', handlers.addDepartment)
+    .post('/add-department', handlers.addDepartment);
 
+// Export router to server.js
 module.exports = app;

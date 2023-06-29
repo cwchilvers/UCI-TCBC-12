@@ -3,21 +3,21 @@ const express = require('express');
 const api = require('./routes/api');
 const main = require('./app/main');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;  // Set port for server
 const app = express();
 
 app
-    .use(express.urlencoded({ extended: false }))
-    .use(express.json())
-    .use('/api', api) // Send /api requests to api.js to handle
+    // Encode and parse incoming requests as JSON
+    .use(express.urlencoded({ extended: false }), express.json())
 
-    // Default response for any other request (Not Found)
-    .use((req, res) => {
-        res.status(404).end();
-    })
+    // Route api requests to api router
+    .use('/api', api)
 
-    // Launch server locally on port 3000
-    .listen(PORT, () => {
+    // Send 404 for any other requests
+    .use((req, res) => res.status(404).end())  
+
+    // Start server
+    .listen(PORT, () => {                                                       
         console.log(`Server running on port ${PORT}`);
-        main.start(); // Start application
+        main.start();
     });
