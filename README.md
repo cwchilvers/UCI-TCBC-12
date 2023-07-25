@@ -11,13 +11,13 @@
 <h4 align="center">A command line application for managing a database of employees, roles, and departments.</h4>
 
 ## Table of Contents
-- [Description](#description)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Technologies Used](#technologies-used)
-- [License](#license)
-- [Credits](#credits)
-- [Contact Information](#contact-information)
+1. [Description](#description)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Technologies Used](#technologies-used)
+5. [License](#license)
+6. [Credits](#credits)
+7. [Contact Information](#contact-information)
 
 ## Description
 CLI Employee Tracker is a Node.js application that allows users to manage a database of employees, roles, and departments. It uses the [MySQL](https://www.npmjs.com/package/mysql) package to connect to a MySQL database and perform queries. The application also utilizes the [Inquirer](https://www.npmjs.com/package/inquirer) package to prompt the user for input.
