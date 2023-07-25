@@ -12,7 +12,6 @@ const update = async () => {
 module.exports = async () => {
     const inquirer = require('inquirer');
 
-    // Update choices
     const { roles, managers } = await update();
 
     return await inquirer.prompt([

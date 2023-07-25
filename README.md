@@ -1,11 +1,74 @@
-# CLI Employee Tracker
+<h1 align="center">
+  CLI Employee Tracker
+</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Node.js-339933.svg?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="MySQL">
+  <img src="https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&logo=MySQL&logoColor=white" alt="dot Env">
+</p>
+
+<h4 align="center">A command line application for managing a database of employees, roles, and departments.</h4>
 
 ## Table of Contents
-* [Description](#description)
-* [Video Walkthrough](#video-walkthrough)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [License](#license)
+- [Credits](#credits)
+- [Contact Information](#contact-information)
 
 ## Description
-Command line application built using Node JS, ExpressJS, and mySQL. User can view and update a database of employees, roles, and departments.
+CLI Employee Tracker is a Node.js application that allows users to manage a database of employees, roles, and departments. It uses the [MySQL](https://www.npmjs.com/package/mysql) package to connect to a MySQL database and perform queries. The application also utilizes the [Inquirer](https://www.npmjs.com/package/inquirer) package to prompt the user for input.
 
-## Video Walkthrough
-[Link to video walkthrough](https://drive.google.com/file/d/160nH4GdPCpmBw_9k6-OgR_qNg3og9V85/view?usp=sharing)
+With this CLI application, users can perform the following tasks:
+- View employees, roles, and departments
+- Add new employees, roles, and departments
+- Update existing employee roles
+- View employees by manager
+- View the total utilized budget of a department
+
+## Installation
+1. Clone the repository locally.
+2. Run `npm install` to install the required dependencies.
+3. Create a MySQL database and seed it with data. The database schema and seed data can be found in the `db` folder.
+4. Create a `.env` file in the root directory with the following contents:
+```
+DB_HOST=localhost
+DB_USER=your_username
+DB_PASS=your_password
+DB_NAME=your_database
+```
+Replace `your_username`, `your_password`, and `your_database` with your MySQL username, password, and database name respectively.
+
+5. Once the database is created and seeded, and the `.env` file is created, run `npm start` to start the application.
+
+## Usage
+1. Run `npm start` to start the application.
+2. The user will be presented with a menu of options to choose from.
+3. Select an option using the arrow keys and press enter.
+4. The user will then be prompted for any additional information required to complete the selected action.
+5. Once the action is completed, the user will be returned to the main menu.
+6. The user can exit the application at any time by selecting the `Exit` option from the main menu.
+
+## Technologies Used
+- Node.js
+- MySQL
+- Inquirer
+- JavaScript
+- cli-table3
+- Dot Env
+
+## License
+This project is licensed under the MIT License. See the [MIT License](https://opensource.org/licenses/mit/) page for details.
+
+## Credits
+- [MySQL](https://www.npmjs.com/package/mysql)
+- [Inquirer](https://www.npmjs.com/package/inquirer)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [cli-table3](https://www.npmjs.com/package/cli-table3)
+- [Dot Env](https://www.npmjs.com/package/dotenv)
+
+## Contact Information
+[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:cwchilvers@gmail.com)
+[![Github](https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/cwchilvers)

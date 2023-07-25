@@ -1,19 +1,26 @@
-module.exports = () => {
-    const db = require('../db_utilities/db_connect');  // Import connect_db.js (connect to database)
+module.exports = async () => {
+    const db = require('../../../config/db_connect');
 
-    return new Promise((resolve, reject) => {
-        // Get all employees from database
-        db.query('SELECT id, first_name, last_name FROM employee', (error, results) => {   
-            if (error) {
-                console.error('An error occurred:', error);
-                reject('An error occurred');
-            } else {
-                const employees = results.map(({ id, first_name, last_name }) => ({
-                    value: id,                          // Stores employee id
-                    name: `${first_name} ${last_name}`  // Displays employee name
-                }));
-                resolve(employees); // Resolve promise with managers array
-            }
+    try {
+        // Get all employees from the database
+        const results = await new Promise((resolve, reject) => {
+            db.query('SELECT id, first_name, last_name FROM employee', (error, results) => {
+                if (error) {
+                    console.error('Failed to retrieve employees.', error);
+                    reject('Failed to retrieve employees.');
+                } else {
+                    resolve(results);
+                }
+            });
         });
-    });
+
+        const employees = results.map(({ id, first_name, last_name }) => ({
+            value: id,
+            name: `${first_name} ${last_name}`
+        }));
+
+        return employees;
+    } catch (error) {
+        throw error;
+    }
 };

@@ -1,23 +1,24 @@
-// Import Modules
+// Import required modules
 const express = require('express');
 const api = require('./routes/api');
 const main = require('./app/main');
 
-const PORT = process.env.PORT || 3000;  // Set port for server
+require('dotenv').config();
+
+// Set the port to listen on
+const PORT = process.env.PORT || 3000;
+
+// Create an Express app instance
 const app = express();
 
+// Middleware setup
 app
-    // Encode and parse incoming requests as JSON
     .use(express.urlencoded({ extended: false }), express.json())
-
-    // Route api requests to api router
     .use('/api', api)
+    .use((req, res) => res.status(404).end());
 
-    // Send 404 for any other requests
-    .use((req, res) => res.status(404).end())  
-
-    // Start server
-    .listen(PORT, () => {                                                       
-        console.log(`Server running on port ${PORT}`);
-        main.start();
-    });
+// Start server
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+    main.start();
+});

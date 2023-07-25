@@ -1,19 +1,26 @@
-module.exports = () => {
-    const db = require('../db_utilities/db_connect');  // Import connect_db.js (connect to database)
+module.exports = async () => {
+    const db = require('../../../config/db_connect');
 
-    return new Promise((resolve, reject) => {
-        // Get all roles from database
-        db.query('SELECT id, title FROM role', (error, results) => {
-            if (error) {
-                console.error('An error occurred:', error);
-                reject('An error occurred');
-            } else {
-                const roles = results.map(({ id, title }) => ({
-                    value: id,  // Stores role id
-                    name: title // Displays role title
-                }));
-                resolve(roles); // Resolve promise with roles array
-            }
+    try {
+        // Get all roles from the database
+        const results = await new Promise((resolve, reject) => {
+            db.query('SELECT id, title FROM role', (error, results) => {
+                if (error) {
+                    console.error('Failed to retrieve roles.', error);
+                    reject('Failed to retrieve roles.');
+                } else {
+                    resolve(results);
+                }
+            });
         });
-    });
+
+        const roles = results.map(({ id, title }) => ({
+            value: id,
+            name: title,
+        }));
+
+        return roles;
+    } catch (error) {
+        throw error;
+    }
 };
