@@ -66,7 +66,6 @@ This project is licensed under the MIT License. See the [MIT License](https://op
 ## Credits
 - [MySQL](https://www.npmjs.com/package/mysql)
 - [Inquirer](https://www.npmjs.com/package/inquirer)
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [cli-table3](https://www.npmjs.com/package/cli-table3)
 - [Dot Env](https://www.npmjs.com/package/dotenv)
 
