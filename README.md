@@ -5,6 +5,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Node.js-339933.svg?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="MySQL">
   <img src="https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&logo=MySQL&logoColor=white" alt="dot Env">
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge">
 </p>
 
 <h4 align="center">A command line application for managing a database of employees, roles, and departments.</h4>
