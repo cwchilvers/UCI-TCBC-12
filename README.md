@@ -53,22 +53,23 @@ Replace `your_username`, `your_password`, and `your_database` with your MySQL us
 6. The user can exit the application at any time by selecting the `Exit` option from the main menu.
 
 ## Technologies Used
-- Node.js
-- MySQL
-- Inquirer
-- JavaScript
 - cli-table3
 - Dot Env
+- Inquirer
+- JavaScript
+- MySQL
+- Node.js
+
 
 ## License
 This project is licensed under the MIT License. See the [MIT License](https://opensource.org/licenses/mit/) page for details.
 
 ## Credits
-- [MySQL](https://www.npmjs.com/package/mysql)
-- [Inquirer](https://www.npmjs.com/package/inquirer)
 - [cli-table3](https://www.npmjs.com/package/cli-table3)
 - [Dot Env](https://www.npmjs.com/package/dotenv)
-
+- [Inquirer](https://www.npmjs.com/package/inquirer)
+- [MySQL](https://www.npmjs.com/package/mysql)
+  
 ## Contact Information
 [![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:cwchilvers@gmail.com)
 [![Github](https://img.shields.io/badge/GitHub-181717.svg?style=for-the-badge&logo=GitHub&logoColor=white)](https://github.com/cwchilvers)
