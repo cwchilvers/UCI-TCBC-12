@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License">
 </p>
 
-<h4 align="center">A command line application for managing a database of employees, roles, and departments.</h4>
+<h4 align="center">A command line application for managing a database of employees, roles, and departments</h4>
 
 ## Table of Contents
 1. [Description](#description)
