@@ -1,5 +1,5 @@
 <h1 align="center">
-  CLI Employee Tracker
+  Employee Tracker
 </h1>
 
 <p align="center">
