@@ -4,6 +4,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Node.js-339933.svg?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js">
+  <img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB" alt="Express.js">  
   <img src="https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&logo=MySQL&logoColor=white" alt="MySQL">
   <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License">
 </p>
@@ -55,6 +56,7 @@ Replace `your_username`, `your_password`, and `your_database` with your MySQL us
 ## Technologies Used
 - cli-table3
 - Dot Env
+- Express.js
 - Inquirer
 - JavaScript
 - MySQL
@@ -67,6 +69,7 @@ This project is licensed under the MIT License. See the [MIT License](https://op
 ## Credits
 - [cli-table3](https://www.npmjs.com/package/cli-table3)
 - [Dot Env](https://www.npmjs.com/package/dotenv)
+- [Express.js](https://expressjs.com/)
 - [Inquirer](https://www.npmjs.com/package/inquirer)
 - [MySQL](https://www.npmjs.com/package/mysql)
   
